@@ -13,10 +13,6 @@ export const BackgroundImage = styled.img`
   z-index: -1;
 `;
 
-export const LogoImage = styled.img`
-  width: 202px;
-`;
-
 export const ContainerLoginScreen = styled.div`
   width: 100%;
   display: flex;

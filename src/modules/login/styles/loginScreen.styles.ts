@@ -1,10 +1,7 @@
+import { Typography } from "antd";
 import styled from "styled-components";
 
-export const ContainerLoginScreen = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: right;
-`;
+const { Title } = Typography;
 
 export const BackgroundImage = styled.img`
   position: absolute;
@@ -15,7 +12,20 @@ export const BackgroundImage = styled.img`
   object-fit: cover;
   z-index: -1;
 `;
-export const LogoImage = styled.img``;
+
+export const LogoImage = styled.img`
+  width: 202px;
+`;
+
+export const ContainerLoginScreen = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: right;
+`;
+
+export const TitleLogin = styled(Title)`
+  color: #006397;
+`;
 
 export const ContainerLogin = styled.div`
   display: flex;
@@ -37,4 +47,5 @@ export const LimitedContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 `;

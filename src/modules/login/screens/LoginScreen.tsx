@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "../../../shared/components/icons/button/Button";
 import SVGLogo from "../../../shared/components/icons/SVGLogo";
 import Input from "../../../shared/components/inputs/input/Input";
-import { useGlobalContext } from "../../../shared/hooks/useGlobalContex";
+import { useGlobalContext } from "../../../shared/hooks/useGlobalContext";
 import { useRequests } from "../../../shared/hooks/userRequests";
 import {
   BackgroundImage,

@@ -1,4 +1,4 @@
-import { LoginRoutsEnum } from "../../../modules/login/routes";
+import { LoginRoutesEnum } from "../../../modules/login/routes";
 import { UserType } from "../../../modules/login/types/UserTypes";
 import { AUHTORIZATION_KEY } from "../../constants/authorizationConstants";
 import { URL_USER } from "../../constants/urls";
@@ -18,7 +18,7 @@ export const getAuthorizationToken = () => getItemStorage(AUHTORIZATION_KEY);
 export const verifyLoggedIn = async (setUser: (user: UserType) => void, user?: UserType) => {
   const token = getAuthorizationToken();
   if (!token) {
-    location.href = LoginRoutsEnum.LOGIN;
+    location.href = LoginRoutesEnum.LOGIN;
   }
   if (!user) {
     await ConnectionAPIGet<UserType>(URL_USER)
@@ -27,7 +27,7 @@ export const verifyLoggedIn = async (setUser: (user: UserType) => void, user?: U
       })
       .catch(() => {
         unsetAuthorizationToken();
-        location.href = LoginRoutsEnum.LOGIN;
+        location.href = LoginRoutesEnum.LOGIN;
       });
   }
   return null;

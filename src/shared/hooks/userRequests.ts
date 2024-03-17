@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { AuthType } from "../../modules/login/types/AuthType";
-import { ProdutcRoutsEnum } from "../../modules/product/routes";
+import { ProdutcRoutesEnum } from "../../modules/product/routes";
 import { ERROR_INVALID_PASSWORD } from "../constants/errorsStatus";
 import { URL_AUTH } from "../constants/urls";
 import { setAuthorizationToken } from "../functions/connection/auth";
@@ -49,7 +49,7 @@ export const useRequests = () => {
       .then((result) => {
         setUser(result.user);
         setAuthorizationToken(result.accessToken);
-        navigate(ProdutcRoutsEnum.PRODUCT);
+        navigate(ProdutcRoutesEnum.PRODUCT);
       })
       .catch(() => {
         setNotification(ERROR_INVALID_PASSWORD, "error");
